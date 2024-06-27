@@ -1,0 +1,464 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+/* Header Styles */
+header {
+  background-color: #4CAF50;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #d32f2f;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #4CAF50;
+  padding: 15px;
+  color: white;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Login and Registration Styles */
+.login-container, .registration-container, .create-employee-container {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form, .registration-form, .create-employee-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.create-employee-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.create-employee-button:hover {
+  background-color: #45a049;
+}
+
+.message {
+  margin-top: 15px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav button {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .login-container, .registration-container, .create-employee-container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container, .registration-container, .create-employee-container {
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .form-group input, .form-group select {
+    padding: 8px;
+  }
+
+  .create-employee-button {
+    padding: 8px 10px;
+  }
+}
+
+.auth-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  width: 48%;
+  margin-right: 20px;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+}
+
+.auth-link {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  width: 48%;
+}
+
+.auth-link:hover {
+  background-color: #1976D2;
+}
+
+.message {
+  margin-top: 20px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 30px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .auth-button, .auth-link {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 20px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input {
+    padding: 10px;
+  }
+
+  .auth-button, .auth-link {
+    padding: 10px 12px;
+  }
+}
+
+/* Styles for the rest of your application remain the same */
+
+/* Employee List Container Styles */
+.employee-list-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px; /* Ensure the container has a max-width */
+  text-align: center;
+  margin: 20px auto;
+  overflow-x: auto; /* Add horizontal scroll for smaller screens */
+}
+
+.employee-list-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures table does not expand out of container */
+}
+
+.employee-table th, .employee-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  word-wrap: break-word; /* Ensures text wraps within cell */
+}
+
+.employee-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.edit-button, .delete-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button {
+  background-color: #2196F3;
+}
+
+.edit-button:hover {
+  background-color: #1976D2;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .employee-list-container {
+    padding: 30px;
+  }
+
+  .employee-table th, .employee-table td {
+    padding: 10px;
+  }
+
+  .edit-button, .delete-button {
+    padding: 6px 10px;
+    margin: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-list-container {
+    padding: 20px;
+  }
+
+  .employee-table th, .employee-table td {
+    padding: 8px;
+  }
+
+  .edit-button, .delete-button {
+    padding: 4px 8px;
+    margin: 1px;
+  }
+}
